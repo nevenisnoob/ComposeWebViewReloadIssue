@@ -77,7 +77,8 @@ fun GoogleWebView(
     onDispose: (WebView) -> Unit = {},
     client: AccompanistWebViewClient = remember { AccompanistWebViewClient() },
     chromeClient: AccompanistWebChromeClient = remember { AccompanistWebChromeClient() },
-    factory: ((Context) -> WebView)? = null
+    factory: ((Context) -> WebView)? = null,
+    existingWebView: WebView? = null
 ) {
     var webView by remember { mutableStateOf<WebView?>(null) }
 
@@ -108,7 +109,7 @@ fun GoogleWebView(
 
     AndroidView(
         factory = { context ->
-            (factory?.invoke(context) ?: WebView(context)).apply {
+            existingWebView ?: WebView(context).apply {
                 onCreated(this)
 
                 layoutParams = ViewGroup.LayoutParams(
