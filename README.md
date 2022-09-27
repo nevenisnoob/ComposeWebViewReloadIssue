@@ -15,5 +15,10 @@ WebViewのreload問題は、[こちら](https://github.com/google/accompanist/is
 1. 生成されたWebViewを　ViewModelに保持する方法
 2. 各Naviationのrouteに webvewのinstanceをcacheする方法
 
-1 について、試してみましたがうまくいかず...(おそらく自分の実装の問題), 2について、そもそもどう実装すべきかよくわかってない、現在困ってます。
-memory leakの問題一旦気にしないで、とにかくreloadを回避したいので、何かいい方法があれば教えていただければ助かります！
+1 についての解決方法はこちら：
+https://github.com/nevenisnoob/ComposeWebViewReloadIssue/commit/a03c17928fc746859dfa6be014d9ff169babb91e
+ただこの方法だとreload問題回避できたが、webviewのリンクは押せなくなってしまったので、引き続き調査する必要がある。
+
+2　については、原理的に1と似たようなものだと思いますので、一旦　1　の方法で引き続き調査する
+
+
