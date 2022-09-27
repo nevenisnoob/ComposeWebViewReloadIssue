@@ -1,6 +1,6 @@
 # 画面構成
 MainScreenにBottomBarがあり、BottomBarより、二つのWebView画面に遷移することができます。
-
+ちなみに、利用するWebViewは[Googleの　WebView Wrapper]([url](https://github.com/google/accompanist/tree/main/web))です。
 <img src="https://user-images.githubusercontent.com/50619510/192420862-81d2e94e-10f3-4c71-8fb1-a3cca8af2f8c.png" width="400px">
 
 # 問題
